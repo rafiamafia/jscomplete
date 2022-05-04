@@ -91,3 +91,31 @@ To detect the logs:
 `$ yarn pm2 logs`
 
 You can test by changing the server.js code.
+
+### Babel
+
+To help the server side render the react application i.e interpret the jsx syntax.
+
+With Babel we can use the `import` syntax instead of `const`. Babel helps node to understand the `import` syntax.
+
+Babel will be used as a production dependency instead of development dependency.
+
+`yarn add @babel/core`
+
+Install babel cli and presets.
+
+`yarn add @babel/cl @babel/preset-react @babel/preset-env @babel/preset-stage-2`
+
+`stage-2` allows you to use features such as class properties which are on their way to become part of the language.
+
+Now let pm2 know to use babel node as the interpreter:
+
+`yarn add @babel/node`
+
+and add the `--interpreter babel-node` flag to the dev command. Next, restart the pm2 process via `$ yarn dev`
+
+Accessing localhost:8080 should now show:
+
+![alt text](localhost_pm2_with_babel_node.png)
+
+---

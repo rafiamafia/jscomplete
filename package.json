@@ -8,7 +8,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch"
+    "dev": "pm2 start -f lib/server.js --watch --interpreter babel-node"
+  },
+  "babel": {
+    "presets": [
+      "@babel/react",
+      "@babel/env"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -16,8 +22,16 @@
     "eslint-plugin-react": "^7.29.4"
   },
   "dependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
-    "pm2": "^5.2.0"
+    "pm2": "^5.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "webpack": "^5.72.0"
   }
 }
