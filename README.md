@@ -81,3 +81,13 @@ You will need to configure Express to use ejs as its template language in the `s
 PM2 is a daemon process manager that will allow us to render a cluster rather than a single node in production.
 
 `$ yarn add pm2`
+
+Add pm2 script to package.json with `--watch` and start the server in the background:
+
+`$ yarn dev`
+
+To detect the logs:
+
+`$ yarn pm2 logs`
+
+You can test by changing the server.js code.
