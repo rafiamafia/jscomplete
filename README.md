@@ -147,3 +147,7 @@ To see how long it took to generate the bundle:
 Note: remove the `--watch` or `-w` flag to display the execution time.
 
 Make sure to exclude node_modules in the webpack configuration. We do not need babel to run on node_modules, just on our application code.
+
+## React Hooks
+
+1. useState: The most commonly used React Hook. useState returns a pair: the current state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It’s similar to this.setState in a class, except it doesn’t merge the old and new state together.
