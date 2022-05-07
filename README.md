@@ -137,3 +137,13 @@ Add `webpack` script to package.json with `-w` flag to watch the files and `-d s
 Run the webpack command:
 
 `$ yarn webpack`
+
+#### Optimization
+
+To see how long it took to generate the bundle:
+
+`$ time yarn webpack`
+
+Note: remove the `--watch` or `-w` flag to display the execution time.
+
+Make sure to exclude node_modules in the webpack configuration. We do not need babel to run on node_modules, just on our application code.
