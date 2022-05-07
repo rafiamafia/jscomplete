@@ -119,3 +119,21 @@ Accessing localhost:8080 should now show:
 ![alt text](localhost_pm2_with_babel_node.png)
 
 ---
+
+### React and Webpack
+
+To run a React application on the client-side
+
+`$ yarn add react react-dom webpack`
+
+To tell webpack where to start and place the bundle.js, we will create webpack.config.js file and use a [configuration](https://webpack.js.org/concepts/#loaders) template found on webpack documentation site and modify the `entry`, `path`, and `filename`.
+
+Use `babel-loader` as a dependency.
+
+`$ yarn add babel-loader`
+
+Add `webpack` script to package.json with `-w` flag to watch the files and `-d source-map --mode development` to make it easier to debug the code.
+
+Run the webpack command:
+
+`$ yarn webpack`

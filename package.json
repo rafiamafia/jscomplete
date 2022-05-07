@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "pm2 start -f lib/server.js --watch --interpreter babel-node"
+    "dev": "pm2 start -f lib/server.js --watch --interpreter babel-node",
+    "webpack": "webpack -w -d source-map --mode development"
   },
   "babel": {
     "presets": [
@@ -27,6 +28,7 @@
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.5",
     "ejs": "^3.1.7",
     "express": "^4.18.1",
     "pm2": "^5.2.0",
